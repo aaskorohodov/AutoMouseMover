@@ -1,4 +1,4 @@
-from mouse_mover import AutomaticMouseMover
+from trayer import Trayer
 
 
-auto_mover = AutomaticMouseMover()
+trayer = Trayer()
