@@ -49,17 +49,18 @@ class AutomaticMouseMover:
                 if self.previous_pos == current_pos:
                     self.change_move_direction()
                     pyautogui.moveRel(self.x_move_direction, self.y_move_direction, duration=0.1)
+                    pyautogui.leftClick()
                 self.previous_pos = pyautogui.position()
 
     def change_move_direction(self) -> None:
         """Changes mouse-move direction onto opposite, so that mouse will not move all over the screen"""
 
-        if self.x_move_direction == 1:
-            self.x_move_direction = -1
+        if self.x_move_direction == 2:
+            self.x_move_direction = -2
         else:
-            self.x_move_direction = 1
+            self.x_move_direction = 2
 
-        if self.y_move_direction == 1:
-            self.y_move_direction = -1
+        if self.y_move_direction == 2:
+            self.y_move_direction = -2
         else:
-            self.y_move_direction = 1
+            self.y_move_direction = 2
